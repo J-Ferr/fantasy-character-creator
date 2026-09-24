@@ -1,0 +1,13 @@
+# Generated character files
+*.txt
+
+#python cache files
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+.venv/
+
+# Visual Studio Code settings
+.vscode/
