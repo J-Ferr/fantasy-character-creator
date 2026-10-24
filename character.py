@@ -15,8 +15,12 @@ class Character:
         self.resistance = ""
         self.effect = ""
         self.weakness = ""
-            
-        ## character class stats
+
+        self.apply_class_stats()
+        self.apply_race_bonus()
+        self.apply_element_ability()
+
+    def apply_class_stats(self):
         if self.character_class == "Mage":
             self.strength = 40
             self.magic = 80
@@ -41,8 +45,9 @@ class Character:
             self.defense = 30
             self.dexterity = 45
             self.healing = 90
-            
-        # character race bonus 
+
+        # character race bonus
+    def apply_race_bonus(self):
         if self.race == "Human":
             self.health += 10
         elif self.race == "Elf":
@@ -59,7 +64,9 @@ class Character:
             self.healing += 5
             self.health += 5
 
+
         # character element ability
+    def apply_element_ability(self):
         if self.element == "Water":
             self.ability = "Tidal Strike"
             self.resistance = "Fire"
